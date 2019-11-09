@@ -1,8 +1,7 @@
 ---
-name: faith-nginx
+name: faith-nginx-final
 blobstore:
   provider: local
   options:
     blobstore_path: /tmp/faithful-nginx-boshrelease-blobs
-final_name: faithful-nginx-boshrelease
 
