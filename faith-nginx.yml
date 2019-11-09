@@ -1,0 +1,29 @@
+---
+name: faithful
+
+releases:
+- name: faithful-nginx-boshrelease
+  version: latest
+
+update:
+  canaries: 1
+  max_in_flight: 1
+  canary_watch_time: 5000-60000
+  update_watch_time: 5000-60000
+
+stemcells:
+- alias: default
+  os: ubuntu-trusty
+  version: latest
+
+instance_groups:
+- name: faithful-nginx
+  azs: [z1]
+  vm_type: default
+  stemcell: default
+  instances: 1
+  networks:
+  - name: default
+  jobs:
+  - name: nginx
+    release: faithful-nginx-boshrelease
