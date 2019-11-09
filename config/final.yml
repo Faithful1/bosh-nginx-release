@@ -1,5 +1,5 @@
 ---
-name: faith-nginx-final
+name: faith-nginx-release
 blobstore:
   provider: local
   options:
