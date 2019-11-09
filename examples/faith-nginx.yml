@@ -1,8 +1,8 @@
 ---
-name: faithful
+name: faith
 
 releases:
-- name: faithful-nginx-boshrelease
+- name: faith-nginx-release
   version: latest
 
 update:
@@ -26,4 +26,4 @@ instance_groups:
   - name: default
   jobs:
   - name: nginx
-    release: faithful-nginx-boshrelease
+    release: faith-nginx-release
