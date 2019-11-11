@@ -1,7 +1,6 @@
 ---
-name: faith-nginx-release
+name: faith-nginx-release-blob
 blobstore:
   provider: local
   options:
     blobstore_path: /tmp/faithful-nginx-release-blobs
-

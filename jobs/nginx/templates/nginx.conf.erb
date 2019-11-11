@@ -14,15 +14,11 @@ http {
   keepalive_timeout  65;
   server_names_hash_bucket_size 512;
 
-
   server {
-            server_name localhost;
-            listen *:80;
+    listen 80;
+    access_log /var/vcap/sys/log/nginx/access.log;
 
-            access_log /var/vcap/sys/log/nginx/access.log;
-            
-	    return 200 "\nHolla I work!\n";
-         }
+     return 200 "\nHolla nginx server works!\n";
   }
 }
 

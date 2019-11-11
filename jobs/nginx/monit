@@ -3,4 +3,3 @@ check process nginx
   start program "/var/vcap/jobs/nginx/bin/ctl start"
   stop program "/var/vcap/jobs/nginx/bin/ctl stop"
   group vcap
-

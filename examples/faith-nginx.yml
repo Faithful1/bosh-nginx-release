@@ -2,14 +2,14 @@
 name: faith
 
 releases:
-- name: faith-nginx-release
+- name: faithful-nginx-boshrelease
   version: latest
 
 update:
   canaries: 1
   max_in_flight: 1
   canary_watch_time: 5000-60000
-  update_watch_time: 5000-60000
+  update_watch_time: 5000-90000
 
 stemcells:
 - alias: default
@@ -17,7 +17,7 @@ stemcells:
   version: latest
 
 instance_groups:
-- name: faithful-nginx
+- name: faithful-nginx-boshrelease
   azs: [z1]
   vm_type: default
   stemcell: default
@@ -26,4 +26,4 @@ instance_groups:
   - name: default
   jobs:
   - name: nginx
-    release: faith-nginx-release
+    release: faithful-nginx-boshrelease
